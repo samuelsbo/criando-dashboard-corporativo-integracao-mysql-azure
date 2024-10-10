@@ -24,7 +24,6 @@ Este dashboard foi criado para monitorar e analisar as horas trabalhadas e os cu
 - **MySQL**: Para armazenamento e gerenciamento de dados.
 - **Azure**: Hospedagem do banco de dados MySQL.
 - **Power BI Desktop**: Para conexão ao banco de dados, tratamento dos dados e criação dos dashboards.
-- **Power Query**: Para limpeza e transformação dos dados antes de sua visualização no Power BI.
 
 ## Base de Dados
 
@@ -49,22 +48,16 @@ Para realizar os cálculos utilizados nos visuais, foram aplicadas as seguintes 
 - **COUNT**: Contagem do número total de funcionários e projetos.
 - **DISTINCTCOUNT**: Para contar o número de funcionários únicos por projeto e departamento.
 
-### Exemplos de Medidas:
-
-- **Total Horas Trabalhadas**: `SUM(works_on[Hours])`
-- **Total Custos MO**: `SUMX(works_on, works_on[Hours] * (employee[salario]/220))`
-- **Contagem de Funcionários**: `DISTINCTCOUNT(employee[Ssn])`
-
 ## Principais Insights
 
 1. **Custos de MO por Departamento**:
-   - Administração e Pesquisa foram os departamentos com maior custo de mão de obra, com valores superiores a $21 mil.
+   - Pesquisa foi o departamento com maior custo de mão de obra, com valor superior a $21 mil.
 
 2. **Custos de MO por Localização**:
-   - As unidades em **Stafford** e **Houston** registraram os maiores custos de MO.
+   - As unidades em **Administração-Stafford** e **Pesquisa-Houston** registraram os maiores custos de MO.
 
 3. **Custos de MO por Projeto**:
-   - **Product Z** e **Newbenefits** foram os projetos mais custosos, com valores superiores a $8 mil.
+   - **Product Z** e **Newbenefits** foram os projetos mais custosos, com valores superiores a $7 mil.
 
 4. **Horas Trabalhadas por Departamento**:
    - O departamento de **Pesquisa** registrou o maior número de horas trabalhadas, seguido de perto pelo departamento de **Administração**.
